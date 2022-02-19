@@ -1,4 +1,4 @@
-#-include .env.$(or $(APP_ENV),dev)
+-include .env.$(or $(APP_ENV),dev)
 export
 
 .PHONY: test
