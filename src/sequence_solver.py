@@ -1,4 +1,4 @@
-    ## takes two different lists and checks to see if one can build the other
+## takes two different lists and checks to see if one can build the other
 def sequence_processor(expected_sequence, example_sub_sequence):
     deconstructed_sub_list = deconstruct_sub_sequence(example_sub_sequence)
     deconstructed_sub_list = sorted(deconstructed_sub_list)
@@ -25,15 +25,23 @@ def sequence_processor(expected_sequence, example_sub_sequence):
     else:
         return False
 
+
 ## converts list to string, to quickly 'remove' sub-sequences from list, checks for strs or ints
 def deconstruct_sub_sequence(example_sub_sequence):
-    result = str(example_sub_sequence).replace('[', '').replace(']', '').replace("'", '').split(', ')
+    result = (
+        str(example_sub_sequence)
+        .replace("[", "")
+        .replace("]", "")
+        .replace("'", "")
+        .split(", ")
+    )
     try:
         result = list(map(int, result))
     except:
         result = list(map(str, result))
 
     return result
+
 
 ## for speed testing
 # if __name__ == "__main__":
