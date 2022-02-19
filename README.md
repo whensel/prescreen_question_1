@@ -12,6 +12,6 @@ Interview Prescreen Question response. Company name left out because it is not r
 
 > 1) Git clone repo
 > 
-> 2) Run: make test
+> 2) From command line in project directory: make test
 
 For help run Make help
