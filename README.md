@@ -10,5 +10,6 @@ Interview Prescreen Question response. Company name left out because it is not r
 
 ## How to Run:
 
-> git clone repo
-> run make test
+> 1) Git clone repo
+> 
+> 2) Run: make test
