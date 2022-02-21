@@ -1,7 +1,6 @@
 ## takes two different lists and checks to see if one can build the other
 def sequence_processor(expected_sequence, example_sub_sequence):
     deconstructed_sub_list = deconstruct_sub_sequence(example_sub_sequence)
-    # deconstructed_sub_list = sorted(deconstructed_sub_list)
 
     ## catch-all for length mismatches
     if len(expected_sequence) != len(deconstructed_sub_list):
@@ -12,7 +11,7 @@ def sequence_processor(expected_sequence, example_sub_sequence):
     idx = 0
     for item in expected_sequence:
         deconstructed_list_value = deconstructed_sub_list[idx]
-        print(deconstructed_list_value)
+        
         if str(item) == str(deconstructed_list_value):
             total = total + 1
         else:
