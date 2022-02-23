@@ -13,8 +13,7 @@ Interview Prescreen Question response. Company name left out because it is not r
 > 1) Git clone repo
 > 
 > 2) From command line in project directory: 
->   -make startapp
->   
->   -make test
+  >   -make startapp
+  >   -make test
 
 For help run Make help
