@@ -1,12 +1,6 @@
 -include .env.$(or $(APP_ENV),dev)
 export
 
-.PHONY: init
-init: ## Installs dependencies
-	python -m pip install --upgrade pip
-    pip install poetry
-    poetry install
-
 .PHONY: test
 test: ## Runs the tests
 	poetry run pytest -v
@@ -18,6 +12,12 @@ lint: ## Runs the linters
 .PHONY: fmt
 fmt: ## Runs the formatters
 	poetry run black .
+
+.PHONY: startapp
+startapp: ## Installs dependencies
+	python -m pip install --upgrade pip
+	pip install poetry
+	poetry install
 
 .PHONY: help
 help: ## Display this message
