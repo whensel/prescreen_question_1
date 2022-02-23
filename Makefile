@@ -1,6 +1,12 @@
 -include .env.$(or $(APP_ENV),dev)
 export
 
+.PHONY: init
+init: ## Installs dependencies
+	python -m pip install --upgrade pip
+    pip install poetry
+    poetry install
+
 .PHONY: test
 test: ## Runs the tests
 	poetry run pytest -v
